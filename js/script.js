@@ -7,8 +7,11 @@ console.log(boton);
 
 function agregarelemento(){
     let elemento=document.createElement('li');
-    elemento.textContent=prompt('Introduce un elemente a la lista');
+    do{
+        elemento.textContent=prompt('Introduce un elemento a la lista');
+    }while(elemento.textContent=='');
     list.appendChild(elemento);
+    console.log(elemento);
 }
 
 boton.addEventListener('click',agregarelemento);
